@@ -1,0 +1,15 @@
+
+<table>
+  <td>title:</td>
+  <td><%= @book.title %></td>
+</table>
+
+<table>
+  <td>body:</td>
+  <td><%= @book.body %></td>
+</table>
+
+<%= link_to "edit", edit_book_path(@book.id) %>
+<a>|</a>
+<%= link_to "back", books_path(@book.id) %>
+
