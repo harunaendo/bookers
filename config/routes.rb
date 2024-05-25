@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'books/new'
   post 'books' => 'books#create'
   #showアクション削除
   get 'books/:id' => 'books#show', as: 'book'
