@@ -8,8 +8,9 @@ class BooksController < ApplicationController
      redirect_to book_path(@book.id)
     else
       @books = Book.all.order(created_id: :desc)
+      flash.now[:alert] = "Unable to post"
       render :index
-      render :edit
+
     end
   end
 
