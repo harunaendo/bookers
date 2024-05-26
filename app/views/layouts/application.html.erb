@@ -11,10 +11,9 @@
   </head>
 
   <table>
-    <%= flash.each do |message_type, message| %>
-    <div class="flash-message notice"></div>
+    <% flash.each do |message_type, message| %>
+    <div class="flash-message notice<%= message_type %>"><%= message %></div>
     <% end %>
-    <%= yield %>
   </table>
 
   <body>
